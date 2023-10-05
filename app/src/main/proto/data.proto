@@ -1,10 +1,17 @@
 syntax = "proto3";
-
+//This line sets the Java package name for the generated Java code.
 option java_package ="com.facebook.datastoreprototype";
+//This option tells the protobuf compiler to generate a separate Java file for each message. This can help organize your code and make it easier to manage.
 option java_multiple_files = true;
 
-message Person{
+// Define a message called Person
+message Person {
+  // This field represents the first name of a person
   string firstName = 1;
+
+  // This field represents the last name of a person
   string lastName = 2;
+
+  // This field represents the age of a person
   int32 age = 3;
 }

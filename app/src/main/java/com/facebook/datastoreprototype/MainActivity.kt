@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         button=findViewById(R.id.save_btn)
         editText=findViewById(R.id.name_et)
 
-        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)// This line uses the ViewModelProvider to get an instance of MainViewModel
         mainViewModel.firstName.observe(this, {
             textView.text = it.firstName+"\n"+it.lastName+"\n"+it.age
             Log.d("FirstName", it.firstName)
